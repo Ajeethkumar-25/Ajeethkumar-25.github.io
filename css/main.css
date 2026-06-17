@@ -5,37 +5,40 @@
 
 /* ---------- CSS Variables ---------- */
 :root {
-  --bg-primary: #06060b;
-  --bg-secondary: #0c0c14;
-  --bg-tertiary: #12121e;
-  --bg-card: rgba(255, 255, 255, 0.025);
-  --bg-card-hover: rgba(255, 255, 255, 0.05);
-  --bg-glass: rgba(255, 255, 255, 0.03);
-  --bg-glass-strong: rgba(255, 255, 255, 0.06);
+  /* Onyx Black / Deep Slate backgrounds */
+  --bg-primary: #0a0a0c;
+  --bg-secondary: #111114;
+  --bg-tertiary: #1a1a1f;
+  --bg-card: rgba(255, 255, 255, 0.02);
+  --bg-card-hover: rgba(255, 255, 255, 0.04);
+  --bg-glass: rgba(255, 255, 255, 0.02);
+  --bg-glass-strong: rgba(255, 255, 255, 0.05);
 
-  --text-primary: #f0f0f5;
-  --text-secondary: #9d9db8;
-  --text-muted: #5e5e78;
+  /* Clean Silver/Gray Text */
+  --text-primary: #f8f9fa;
+  --text-secondary: #a1a1aa;
+  --text-muted: #52525b;
 
-  --accent: #6366f1;
-  --accent-light: #818cf8;
-  --accent-dark: #4338ca;
-  --accent-glow: rgba(99, 102, 241, 0.2);
-  --accent-2: #8b5cf6;
-  --accent-3: #ec4899;
+  /* Premium Azure & Teal Accents */
+  --accent: #0ea5e9; /* Sky blue */
+  --accent-light: #38bdf8;
+  --accent-dark: #0284c7;
+  --accent-glow: rgba(14, 165, 233, 0.15);
+  --accent-2: #2563eb; /* Royal blue */
+  --accent-3: #0d9488; /* Teal */
 
-  --gradient-main: linear-gradient(135deg, #6366f1, #8b5cf6, #a78bfa);
-  --gradient-accent: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
-  --gradient-card: linear-gradient(145deg, rgba(99, 102, 241, 0.06), rgba(139, 92, 246, 0.02));
-  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+  --gradient-main: linear-gradient(135deg, #0ea5e9, #2563eb);
+  --gradient-accent: linear-gradient(135deg, #38bdf8 0%, #2563eb 50%, #0d9488 100%);
+  --gradient-card: linear-gradient(145deg, rgba(14, 165, 233, 0.04), rgba(37, 99, 235, 0.01));
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.005));
 
-  --border: rgba(255, 255, 255, 0.06);
-  --border-hover: rgba(99, 102, 241, 0.3);
+  --border: rgba(255, 255, 255, 0.05);
+  --border-hover: rgba(14, 165, 233, 0.25);
 
-  --color-ai: #818cf8;
-  --color-cloud: #22d3ee;
-  --color-dev: #34d399;
-  --color-pro: #fbbf24;
+  --color-ai: #38bdf8;
+  --color-cloud: #0ea5e9;
+  --color-dev: #10b981;
+  --color-pro: #d4af37; /* Keeping gold for premium badges */
 
   --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-display: 'Playfair Display', Georgia, serif;

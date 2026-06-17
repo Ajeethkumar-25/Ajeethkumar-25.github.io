@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projects by Ajeethkumar Muruganandham – Multi-agent AI platforms, RAG pipelines, and intelligent document processing." />
+  <title>Projects | Ajeethkumar M.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body data-page="projects">
+  <div class="loader" id="loader"><div class="loader-inner"><div class="loader-text"><span class="loader-bracket">&lt;</span>AK<span class="loader-bracket">/&gt;</span></div><div class="loader-bar"><div class="loader-progress"></div></div></div></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+  <div class="page-transition" id="page-transition"><div class="transition-slice"></div><div class="transition-slice"></div><div class="transition-slice"></div><div class="transition-slice"></div><div class="transition-slice"></div></div>
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo magnetic" data-strength="20"><span class="logo-bracket">&lt;</span>AK<span class="logo-bracket">/&gt;</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="experience.html" class="nav-link">Experience</a></li>
+        <li><a href="projects.html" class="nav-link active">Projects</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-tag reveal-up">My Work</span>
+      <h1 class="page-hero-title reveal-up">Featured <span class="accent">Projects</span></h1>
+      <p class="page-hero-sub reveal-up">Real-world AI systems built for production. Each project pushed the boundaries of what's possible.</p>
+    </div>
+  </section>
+
+  <!-- FILTERS -->
+  <section class="section proj-section">
+    <div class="container">
+      <div class="proj-filters reveal-up">
+        <button class="proj-filter active" data-filter="all">All</button>
+        <button class="proj-filter" data-filter="agent">Agentic AI</button>
+        <button class="proj-filter" data-filter="rag">RAG</button>
+        <button class="proj-filter" data-filter="docai">Document AI</button>
+        <button class="proj-filter" data-filter="cloud">Cloud</button>
+      </div>
+
+      <div class="proj-grid" id="proj-grid">
+
+        <!-- Project 1 -->
+        <article class="proj-card tilt-card reveal-up" data-category="agent cloud" data-delay="0">
+          <div class="proj-card-glow"></div>
+          <div class="proj-card-inner">
+            <div class="proj-header">
+              <span class="proj-num">01</span>
+              <div class="proj-status proj-status--live">
+                <span class="proj-status-dot"></span> Production
+              </div>
+            </div>
+            <h3 class="proj-title">Multi-Agent AI Platform</h3>
+            <p class="proj-desc">Enterprise-grade agentic platform with autonomous multi-step decision-making. Built with LangGraph orchestration, tool-calling agents, planning agents, and domain-specific agents serving 3+ organizations.</p>
+            <div class="proj-features">
+              <div class="proj-feature">
+                <span class="proj-feature-icon">🔄</span>
+                <span>Autonomous agent loops</span>
+              </div>
+              <div class="proj-feature">
+                <span class="proj-feature-icon">🛠️</span>
+                <span>Tool-calling & planning agents</span>
+              </div>
+              <div class="proj-feature">
+                <span class="proj-feature-icon">📊</span>
+                <span>Real-time monitoring dashboard</span>
+              </div>
+            </div>
+            <div class="proj-tags">
+              <span>LangGraph</span><span>AWS Bedrock</span><span>Multi-Agent</span><span>Python</span><span>FastAPI</span>
+            </div>
+            <div class="proj-stats">
+              <div class="proj-stat"><span class="proj-stat-val">3+</span><span class="proj-stat-lbl">Clients</span></div>
+              <div class="proj-stat"><span class="proj-stat-val">92%</span><span class="proj-stat-lbl">Accuracy</span></div>
+              <div class="proj-stat"><span class="proj-stat-val">5</span><span class="proj-stat-lbl">Agent Types</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="proj-card tilt-card reveal-up" data-category="docai agent" data-delay="150">
+          <div class="proj-card-glow"></div>
+          <div class="proj-card-inner">
+            <div class="proj-header">
+              <span class="proj-num">02</span>
+              <div class="proj-status proj-status--live">
+                <span class="proj-status-dot"></span> Production
+              </div>
+            </div>
+            <h3 class="proj-title">Intelligent Document Processing</h3>
+            <p class="proj-desc">AI-powered document processing system with OCR, multi-class classification, and structured extraction. Handles 15+ document types with iterative AI-assisted validation achieving 94% accuracy.</p>
+            <div class="proj-features">
+              <div class="proj-feature">
+                <span class="proj-feature-icon">📄</span>
+                <span>15+ document type support</span>
+              </div>
+              <div class="proj-feature">
+                <span class="proj-feature-icon">🧪</span>
+                <span>AI-assisted validation loops</span>
+              </div>
+              <div class="proj-feature">
+                <span class="proj-feature-icon">⚡</span>
+                <span>Real-time extraction pipeline</span>
+              </div>
+            </div>
+            <div class="proj-tags">
+              <span>OCR</span><span>Document AI</span><span>LLM</span><span>Classification</span><span>Python</span>
+            </div>
+            <div class="proj-stats">
+              <div class="proj-stat"><span class="proj-stat-val">94%</span><span class="proj-stat-lbl">Accuracy</span></div>
+              <div class="proj-stat"><span class="proj-stat-val">15+</span><span class="proj-stat-lbl">Doc Types</span></div>
+              <div class="proj-stat"><span class="proj-stat-val">35%</span><span class="proj-stat-lbl">Improvement</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="proj-card tilt-card reveal-up" data-category="rag cloud" data-delay="300">
+          <div class="proj-card-glow"></div>
+          <div class="proj-card-inner">
+            <div class="proj-header">
+              <span class="proj-num">03</span>
+              <div class="proj-status proj-status--live">
+                <span class="proj-status-dot"></span> Production
+              </div>
+            </div>
+            <h3 class="proj-title">RAG Pipeline Engine</h3>
+            <p class="proj-desc">Production-ready retrieval-augmented generation system with dual vector stores (FAISS + Pinecone). Advanced chunking strategies, hybrid search, and answer relevance scoring.</p>
+            <div class="proj-features">
+              <div class="proj-feature">
+                <span class="proj-feature-icon">🔍</span>
+                <span>Hybrid vector search</span>
+              </div>
+              <div class="proj-feature">
+                <span class="proj-feature-icon">📐</span>
+                <span>Intelligent chunking</span>
+              </div>
+              <div class="proj-feature">
+                <span class="proj-feature-icon">✅</span>
+                <span>Answer relevance scoring</span>
+              </div>
+            </div>
+            <div class="proj-tags">
+              <span>RAG</span><span>FAISS</span><span>Pinecone</span><span>Vector DB</span><span>LLM</span>
+            </div>
+            <div class="proj-stats">
+              <div class="proj-stat"><span class="proj-stat-val">60%</span><span class="proj-stat-lbl">Faster</span></div>
+              <div class="proj-stat"><span class="proj-stat-val">92%</span><span class="proj-stat-lbl">Relevance</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="proj-card tilt-card reveal-up" data-category="cloud agent" data-delay="100">
+          <div class="proj-card-glow"></div>
+          <div class="proj-card-inner">
+            <div class="proj-header">
+              <span class="proj-num">04</span>
+              <div class="proj-status proj-status--dev">
+                <span class="proj-status-dot"></span> In Development
+              </div>
+            </div>
+            <h3 class="proj-title">Cloud-Native Agent Deployer</h3>
+            <p class="proj-desc">Automated deployment pipeline for AI agents across AWS and Azure. One-click deployment from development to production with monitoring, scaling, and rollback capabilities.</p>
+            <div class="proj-features">
+              <div class="proj-feature">
+                <span class="proj-feature-icon">☁️</span>
+                <span>Multi-cloud support (AWS + Azure)</span>
+              </div>
+              <div class="proj-feature">
+                <span class="proj-feature-icon">🚀</span>
+                <span>One-click agent deployment</span>
+              </div>
+              <div class="proj-feature">
+                <span class="proj-feature-icon">📈</span>
+                <span>Auto-scaling & monitoring</span>
+              </div>
+            </div>
+            <div class="proj-tags">
+              <span>AWS</span><span>Azure</span><span>Docker</span><span>CI/CD</span><span>OpenClaw</span>
+            </div>
+            <div class="proj-stats">
+              <div class="proj-stat"><span class="proj-stat-val">2</span><span class="proj-stat-lbl">Cloud Platforms</span></div>
+              <div class="proj-stat"><span class="proj-stat-val">80%</span><span class="proj-stat-lbl">Deploy Faster</span></div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><span class="footer-logo"><span class="logo-bracket">&lt;</span>AK<span class="logo-bracket">/&gt;</span></span><p>Designing intelligent systems that make a difference.</p></div>
+        <div class="footer-links"><h4>Navigation</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="experience.html">Experience</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div>
+        <div class="footer-links"><h4>Connect</h4><a href="https://linkedin.com/in/ajeethkumar-muruganandham" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/Ajeethkumar-25/" target="_blank" rel="noopener noreferrer">GitHub</a><a href="mailto:ajeethkumar@email.com">Email</a></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 Ajeethkumar Muruganandham. Crafted with passion.</p></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

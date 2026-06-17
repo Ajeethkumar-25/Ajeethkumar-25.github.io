@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Ajeethkumar Muruganandham – Agentic AI Engineer building intelligent multi-agent systems and LLM-powered automation." />
+  <title>Ajeethkumar Muruganandham | AI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+
+<body data-page="home">
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-text">
+        <span class="loader-bracket">&lt;</span>AK<span class="loader-bracket">/&gt;</span>
+      </div>
+      <div class="loader-bar">
+        <div class="loader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- PAGE TRANSITION OVERLAY -->
+  <div class="page-transition" id="page-transition">
+    <div class="transition-slice"></div>
+    <div class="transition-slice"></div>
+    <div class="transition-slice"></div>
+    <div class="transition-slice"></div>
+    <div class="transition-slice"></div>
+  </div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo magnetic" data-strength="20">
+        <span class="logo-bracket">&lt;</span>AK<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="experience.html" class="nav-link">Experience</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <canvas class="particle-canvas" id="particle-canvas"></canvas>
+    <div class="hero-bg-grid"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal-up" data-delay="0">
+        <span class="badge-dot"></span>
+        Open to opportunities
+      </div>
+
+      <h1 class="hero-title">
+        <span class="hero-greeting reveal-up" data-delay="100">Hello, I'm</span>
+        <span class="hero-name reveal-up" data-delay="200">
+          <span class="hero-name-text">Ajeethkumar</span>
+        </span>
+        <span class="hero-name hero-name--accent reveal-up" data-delay="300">
+          <span class="hero-name-text">Muruganandham</span>
+        </span>
+      </h1>
+
+      <div class="hero-role-wrapper reveal-up" data-delay="400">
+        <span class="hero-role-label">I build</span>
+        <div class="hero-role-rotator">
+          <span class="hero-role" id="hero-role">Agentic AI Systems</span>
+          <span class="hero-cursor-blink">|</span>
+        </div>
+      </div>
+
+      <p class="hero-description reveal-up" data-delay="500">
+        AI/ML Engineer crafting autonomous multi-agent platforms, intelligent document
+        processing systems, and production-grade RAG pipelines — deployed on AWS & Azure.
+      </p>
+
+      <div class="hero-actions reveal-up" data-delay="600">
+        <a href="projects.html" class="btn btn--primary magnetic" data-strength="12">
+          <span class="btn-text">Explore My Work</span>
+          <span class="btn-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M7 17L17 7M17 7H7M17 7V17" />
+            </svg>
+          </span>
+          <span class="btn-shine"></span>
+        </a>
+        <a href="contact.html" class="btn btn--glass magnetic" data-strength="12">
+          <span class="btn-text">Get in Touch</span>
+        </a>
+      </div>
+
+      <div class="hero-stats reveal-up" data-delay="700">
+        <div class="stat-card">
+          <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Years Exp.</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">AI Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="94">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">AI Accuracy</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-cta">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll to explore</span>
+    </div>
+
+    <!-- Floating tech icons -->
+    <div class="floating-elements">
+      <div class="float-el float-el--1">🤖</div>
+      <div class="float-el float-el--2">🧠</div>
+      <div class="float-el float-el--3">☁️</div>
+      <div class="float-el float-el--4">⚡</div>
+      <div class="float-el float-el--5">🔗</div>
+    </div>
+  </section>
+
+  <!-- ========== QUICK INTRO ========== -->
+  <section class="section home-intro" id="intro">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-text">
+          <span class="section-tag reveal-up">Who I Am</span>
+          <h2 class="section-title reveal-up">
+            An engineer who thinks in <span class="accent">agents</span>,
+            speaks in <span class="accent">Python</span>,
+            and deploys on <span class="accent">cloud</span>.
+          </h2>
+          <p class="intro-para reveal-up">
+            I architect intelligent systems that combine LLM reasoning with real-world
+            tool execution. From multi-agent platforms on AWS Bedrock to document
+            processing pipelines achieving 94% accuracy — I turn AI research into
+            production-ready solutions.
+          </p>
+          <a href="about.html" class="link-arrow reveal-up magnetic" data-strength="8">
+            More about me
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+        <div class="intro-cards">
+          <div class="mini-card reveal-up tilt-card" data-delay="0">
+            <div class="mini-card-icon">🤖</div>
+            <h3>Agentic AI</h3>
+            <p>Multi-agent orchestration with LangGraph & LangChain</p>
+          </div>
+          <div class="mini-card reveal-up tilt-card" data-delay="100">
+            <div class="mini-card-icon">☁️</div>
+            <h3>Cloud & DevOps</h3>
+            <p>AWS Bedrock, Azure OpenAI, Docker, CI/CD</p>
+          </div>
+          <div class="mini-card reveal-up tilt-card" data-delay="200">
+            <div class="mini-card-icon">📄</div>
+            <h3>Document AI</h3>
+            <p>OCR, classification, extraction with 94% accuracy</p>
+          </div>
+          <div class="mini-card reveal-up tilt-card" data-delay="300">
+            <div class="mini-card-icon">🔍</div>
+            <h3>RAG Pipelines</h3>
+            <p>Vector search with FAISS & Pinecone, 60% faster retrieval</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED PROJECTS PREVIEW ========== -->
+  <section class="section section--dark home-projects" id="featured">
+    <div class="container">
+      <div class="section-header-row">
+        <div>
+          <span class="section-tag reveal-up">Featured Work</span>
+          <h2 class="section-title reveal-up">Selected <span class="accent">Projects</span></h2>
+        </div>
+        <a href="projects.html" class="link-arrow reveal-up magnetic" data-strength="8">
+          View all projects
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="featured-grid">
+        <article class="featured-card tilt-card reveal-up" data-delay="0">
+          <div class="featured-card-bg"></div>
+          <div class="featured-number">01</div>
+          <div class="featured-content">
+            <h3>Multi-Agent AI Platform</h3>
+            <p>Enterprise agentic platform with LangGraph orchestration serving 3+ organizations.</p>
+            <div class="featured-tags">
+              <span>LangGraph</span><span>AWS Bedrock</span><span>Multi-Agent</span>
+            </div>
+          </div>
+          <div class="featured-metric">
+            <span class="featured-metric-value">92%</span>
+            <span class="featured-metric-label">Accuracy</span>
+          </div>
+        </article>
+
+        <article class="featured-card tilt-card reveal-up" data-delay="150">
+          <div class="featured-card-bg"></div>
+          <div class="featured-number">02</div>
+          <div class="featured-content">
+            <h3>Intelligent Document Processing</h3>
+            <p>AI-powered OCR pipeline handling 15+ document types with AI-assisted validation.</p>
+            <div class="featured-tags">
+              <span>OCR</span><span>Document AI</span><span>LLM</span>
+            </div>
+          </div>
+          <div class="featured-metric">
+            <span class="featured-metric-value">94%</span>
+            <span class="featured-metric-label">Extraction</span>
+          </div>
+        </article>
+
+        <article class="featured-card tilt-card reveal-up" data-delay="300">
+          <div class="featured-card-bg"></div>
+          <div class="featured-number">03</div>
+          <div class="featured-content">
+            <h3>RAG Pipeline Engine</h3>
+            <p>Production RAG system with FAISS/Pinecone reducing retrieval latency by 60%.</p>
+            <div class="featured-tags">
+              <span>RAG</span><span>FAISS</span><span>Pinecone</span>
+            </div>
+          </div>
+          <div class="featured-metric">
+            <span class="featured-metric-value">60%</span>
+            <span class="featured-metric-label">Faster</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section class="section home-cta">
+    <div class="container">
+      <div class="cta-box reveal-up">
+        <div class="cta-glow"></div>
+        <h2 class="cta-title">Let's Build Something <span class="accent">Extraordinary</span></h2>
+        <p class="cta-text">
+          Looking for an AI engineer who can turn complex challenges into production-ready solutions? Let's talk.
+        </p>
+        <a href="contact.html" class="btn btn--primary btn--lg magnetic" data-strength="12">
+          <span class="btn-text">Start a Conversation</span>
+          <span class="btn-shine"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo"><span class="logo-bracket">&lt;</span>AK<span
+              class="logo-bracket">/&gt;</span></span>
+          <p>Designing intelligent systems that make a difference.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h4>Connect</h4>
+          <a href="https://linkedin.com/in/ajeethkumar-muruganandham" target="_blank"
+            rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/Ajeethkumar-25/" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="mailto:ajeethkumar@email.com">Email</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Ajeethkumar Muruganandham. Crafted with passion.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

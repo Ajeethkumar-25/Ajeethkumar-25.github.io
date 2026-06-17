@@ -425,6 +425,17 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 8px 40px rgba(99, 102, 241, 0.35);
 }
 
+.btn--premium {
+  background: linear-gradient(135deg, #d4af37, #f3e5ab, #aa771c);
+  color: #111;
+  box-shadow: 0 4px 24px rgba(212, 175, 55, 0.3);
+}
+
+.btn--premium:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 40px rgba(212, 175, 55, 0.45);
+}
+
 .btn--glass {
   background: var(--bg-glass-strong);
   color: var(--text-primary);

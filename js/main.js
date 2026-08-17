@@ -298,20 +298,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const output = document.getElementById('terminal-output');
     if (output) {
       const jsonContent = `{
-  <span class="t-key">"name"</span>: <span class="t-string">"Ajeethkumar M."</span>,
-  <span class="t-key">"role"</span>: <span class="t-string">"Agentic AI Engineer"</span>,
+  <span class="t-key">"name"</span>: <span class="t-string">"Ajeethkumar Muruganandham"</span>,
+  <span class="t-key">"role"</span>: <span class="t-string">"Senior AI Engineer"</span>,
   <span class="t-key">"location"</span>: <span class="t-string">"Chennai, India"</span>,
   <span class="t-key">"experience"</span>: <span class="t-number">5</span>,
-  <span class="t-key">"focus"</span>: [
-    <span class="t-string">"Multi-Agent Systems"</span>,
-    <span class="t-string">"LLM Orchestration"</span>,
-    <span class="t-string">"RAG Pipelines"</span>,
-    <span class="t-string">"Document AI"</span>
+  <span class="t-key">"flagship_work"</span>: <span class="t-string">"GTMer (AI Sales SaaS)"</span>,
+  <span class="t-key">"innovations"</span>: [
+    <span class="t-string">"Carry Agent (Dual KG + RAG)"</span>,
+    <span class="t-string">"Tree-Sitter AST Self-Healing"</span>,
+    <span class="t-string">"Paushtik Aahaar RAG Chatbot"</span>
   ],
-  <span class="t-key">"cloud"</span>: [<span class="t-string">"AWS"</span>, <span class="t-string">"Azure"</span>],
-  <span class="t-key">"tools"</span>: [<span class="t-string">"LangGraph"</span>, <span class="t-string">"Bedrock"</span>, <span class="t-string">"OpenClaw"</span>],
-  <span class="t-key">"education"</span>: <span class="t-string">"M.Sc AI (2026)"</span>,
-  <span class="t-key">"passion"</span>: <span class="t-string">"Building autonomous AI"</span>
+  <span class="t-key">"stack"</span>: [<span class="t-string">"LangGraph"</span>, <span class="t-string">"AWS Bedrock"</span>, <span class="t-string">"FastAPI"</span>, <span class="t-string">"Neo4j"</span>, <span class="t-string">"Docker"</span>],
+  <span class="t-key">"education"</span>: <span class="t-string">"MCA (AI & ML) - Chandigarh Univ"</span>,
+  <span class="t-key">"mindset"</span>: <span class="t-string">"Reason → Plan → Act → Self-Correct"</span>
 }`;
       // Type character by character
       const plain = jsonContent.replace(/<[^>]*>/g, '');

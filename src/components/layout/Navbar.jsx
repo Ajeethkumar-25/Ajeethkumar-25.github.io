@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Terminal, Cpu, Briefcase, Sparkles, Send, Github, Linkedin } from 'lucide-react';
+import { Menu, X, Github, Linkedin } from 'lucide-react';
 import { personalInfo } from '../../data/portfolioData';
 
 export const Navbar = ({ activeSection, setActiveSection }) => {
@@ -27,30 +27,30 @@ export const Navbar = ({ activeSection, setActiveSection }) => {
       left: 0,
       right: 0,
       zIndex: 100,
-      background: 'rgba(3, 7, 18, 0.85)',
+      background: 'rgba(7, 11, 20, 0.85)',
       backdropFilter: 'blur(20px)',
       WebkitBackdropFilter: 'blur(20px)',
-      borderBottom: '1px solid var(--border-subtle)',
+      borderBottom: '1px solid var(--border-color)',
       padding: '16px 0'
     }}>
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        {/* Sleek Monospace Logo */}
+        {/* Monospace Tech Brand */}
         <a
           href="#hero"
           onClick={(e) => { e.preventDefault(); handleNav('hero'); }}
           style={{
             textDecoration: 'none',
             fontFamily: 'var(--font-mono)',
-            fontSize: '1rem',
+            fontSize: '1.05rem',
             fontWeight: 700,
-            color: '#ffffff',
+            color: 'var(--text-main)',
             letterSpacing: '1px'
           }}
         >
-          <span style={{ color: 'var(--accent-indigo-light)' }}>//</span> AJEETHKUMAR.AI
+          <span style={{ color: 'var(--accent-primary)' }}>//</span> AJEETHKUMAR<span style={{ color: 'var(--accent-secondary)' }}>.AI</span>
         </a>
 
-        {/* Clean Desktop Navigation Links */}
+        {/* Desktop Links */}
         <div style={{ display: 'none', gap: '32px', alignItems: 'center' }} className="desktop-menu">
           {navItems.map((item) => (
             <button
@@ -59,7 +59,7 @@ export const Navbar = ({ activeSection, setActiveSection }) => {
               style={{
                 background: 'transparent',
                 border: 'none',
-                color: activeSection === item.id ? '#ffffff' : 'var(--text-secondary)',
+                color: activeSection === item.id ? 'var(--accent-primary)' : 'var(--text-secondary)',
                 fontSize: '0.88rem',
                 fontWeight: activeSection === item.id ? 600 : 500,
                 cursor: 'pointer',
@@ -93,8 +93,8 @@ export const Navbar = ({ activeSection, setActiveSection }) => {
           </a>
           <button
             onClick={() => handleNav('contact')}
-            className="btn-enterprise btn-primary-dark"
-            style={{ padding: '7px 16px', fontSize: '0.82rem' }}
+            className="btn-electric btn-cyan"
+            style={{ padding: '8px 18px', fontSize: '0.82rem' }}
           >
             Get in Touch
           </button>
@@ -113,8 +113,8 @@ export const Navbar = ({ activeSection, setActiveSection }) => {
 
       {menuOpen && (
         <div style={{
-          background: 'var(--bg-base)',
-          borderBottom: '1px solid var(--border-subtle)',
+          background: 'var(--bg-secondary)',
+          borderBottom: '1px solid var(--border-color)',
           padding: '24px',
           display: 'flex',
           flexDirection: 'column',

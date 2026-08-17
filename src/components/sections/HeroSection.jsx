@@ -1,15 +1,15 @@
 import React from 'react';
-import { ArrowUpRight, ShieldCheck, Terminal, Cpu, Layers } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { personalInfo } from '../../data/portfolioData';
 
 export const HeroSection = () => {
   return (
     <section id="hero" style={{ paddingTop: '140px', paddingBottom: '90px', position: 'relative' }}>
       <div className="container">
-        {/* Top Status Badge */}
+        {/* Status Pill */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '28px' }}>
-          <div className="status-indicator">
-            <span className="status-dot" />
+          <div className="status-pill-emerald">
+            <span className="status-dot-emerald" />
             <span>OPEN TO SENIOR AI LEADERSHIP</span>
           </div>
           <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
@@ -41,11 +41,11 @@ export const HeroSection = () => {
 
             {/* CTAs */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginBottom: '48px' }}>
-              <a href="#projects" className="btn-enterprise btn-primary-dark">
+              <a href="#projects" className="btn-electric btn-cyan">
                 <span>Inspect System Architectures</span>
                 <ArrowUpRight size={16} />
               </a>
-              <a href="#contact" className="btn-enterprise btn-secondary-dark">
+              <a href="#contact" className="btn-electric btn-outline-navy">
                 <span>Connect with Me</span>
               </a>
             </div>
@@ -56,25 +56,25 @@ export const HeroSection = () => {
               gridTemplateColumns: 'repeat(3, 1fr)',
               gap: '24px',
               paddingTop: '32px',
-              borderTop: '1px solid var(--border-subtle)'
+              borderTop: '1px solid var(--border-color)'
             }}>
               <div>
-                <div style={{ fontSize: '2rem', fontWeight: 800, color: '#ffffff', fontFamily: 'var(--font-mono)' }}>5+</div>
+                <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--text-main)', fontFamily: 'var(--font-mono)' }}>5+</div>
                 <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginTop: '2px' }}>Years Engineering</div>
               </div>
               <div>
-                <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--accent-indigo-light)', fontFamily: 'var(--font-mono)' }}>31+</div>
+                <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--accent-primary)', fontFamily: 'var(--font-mono)' }}>31+</div>
                 <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginTop: '2px' }}>SaaS Modules (GTMer)</div>
               </div>
               <div>
-                <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--accent-emerald)', fontFamily: 'var(--font-mono)' }}>94%</div>
+                <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--accent-success)', fontFamily: 'var(--font-mono)' }}>94%</div>
                 <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginTop: '2px' }}>Extraction Accuracy</div>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Sleek Identity Card */}
-          <div className="enterprise-card" style={{ padding: '36px', position: 'relative' }}>
+          {/* Right Column: Identity Card */}
+          <div className="custom-card" style={{ padding: '36px', position: 'relative' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '24px' }}>
               <img
                 src="./profile.jpg"
@@ -84,17 +84,17 @@ export const HeroSection = () => {
                   height: '84px',
                   borderRadius: 'var(--radius-sm)',
                   objectFit: 'cover',
-                  border: '1px solid var(--border-highlight)'
+                  border: '1px solid var(--accent-primary)'
                 }}
                 onError={(e) => {
                   e.target.src = "https://raw.githubusercontent.com/Ajeethkumar-25/Ajeethkumar-25/main/profile.jpg";
                 }}
               />
               <div>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#ffffff' }}>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-main)' }}>
                   {personalInfo.name}
                 </h3>
-                <p style={{ fontSize: '0.88rem', color: 'var(--accent-indigo-light)', fontWeight: 500 }}>
+                <p style={{ fontSize: '0.88rem', color: 'var(--accent-primary)', fontWeight: 500 }}>
                   {personalInfo.role}
                 </p>
                 <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', marginTop: '2px' }}>
@@ -107,13 +107,13 @@ export const HeroSection = () => {
               background: 'var(--bg-inset)',
               borderRadius: 'var(--radius-xs)',
               padding: '16px',
-              border: '1px solid var(--border-subtle)',
+              border: '1px solid var(--border-color)',
               fontFamily: 'var(--font-mono)',
               fontSize: '0.8rem',
-              color: '#94a3b8',
+              color: 'var(--text-secondary)',
               lineHeight: '1.6'
             }}>
-              <div style={{ color: 'var(--accent-cyan)', marginBottom: '6px' }}>// Core Specializations</div>
+              <div style={{ color: 'var(--accent-primary)', marginBottom: '6px' }}>// Core Specializations</div>
               <div>• Autonomous Agent Swarms (LangGraph)</div>
               <div>• Dual KG + Vector RAG (Neo4j, Chroma)</div>
               <div>• Self-Healing AST Engines (Tree-Sitter)</div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronRight, CheckCircle2, ArrowUpRight, Terminal, Layers, Sparkles } from 'lucide-react';
+import { ChevronRight, CheckCircle2, ArrowUpRight } from 'lucide-react';
 import { projectsData } from '../../data/portfolioData';
 
 export const ProjectsSection = () => {
@@ -19,24 +19,24 @@ export const ProjectsSection = () => {
     : projectsData.filter(p => p.category === activeCategory);
 
   return (
-    <section id="projects" style={{ padding: '90px 0', borderTop: '1px solid var(--border-subtle)' }}>
+    <section id="projects" style={{ padding: '90px 0', borderTop: '1px solid var(--border-color)', background: 'var(--bg-secondary)' }}>
       <div className="container">
         {/* Section Header */}
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '40px', gap: '20px' }}>
           <div>
-            <div className="section-pill">Engineering Portfolio</div>
+            <div className="pill-badge">Engineering Portfolio</div>
             <h2 className="section-title gradient-heading" style={{ margin: 0 }}>
               Production Systems & Innovations
             </h2>
           </div>
 
-          {/* Clean Segmented Filter */}
+          {/* Segmented Filter */}
           <div style={{
             display: 'flex',
             background: 'var(--bg-inset)',
             padding: '4px',
             borderRadius: 'var(--radius-sm)',
-            border: '1px solid var(--border-subtle)',
+            border: '1px solid var(--border-color)',
             gap: '4px',
             flexWrap: 'wrap'
           }}>
@@ -45,9 +45,9 @@ export const ProjectsSection = () => {
                 key={c.id}
                 onClick={() => setActiveCategory(c.id)}
                 style={{
-                  background: activeCategory === c.id ? 'var(--bg-card-hover)' : 'transparent',
-                  color: activeCategory === c.id ? '#ffffff' : 'var(--text-muted)',
-                  border: activeCategory === c.id ? '1px solid var(--border-highlight)' : '1px solid transparent',
+                  background: activeCategory === c.id ? 'var(--bg-card)' : 'transparent',
+                  color: activeCategory === c.id ? 'var(--accent-primary)' : 'var(--text-muted)',
+                  border: activeCategory === c.id ? '1px solid var(--border-hover)' : '1px solid transparent',
                   padding: '6px 14px',
                   borderRadius: 'var(--radius-xs)',
                   fontSize: '0.82rem',
@@ -71,7 +71,7 @@ export const ProjectsSection = () => {
           {filtered.map(proj => (
             <div
               key={proj.id}
-              className="enterprise-card"
+              className="custom-card"
               style={{
                 padding: '32px',
                 display: 'flex',
@@ -91,13 +91,13 @@ export const ProjectsSection = () => {
                     textTransform: 'uppercase',
                     letterSpacing: '1px',
                     fontFamily: 'var(--font-mono)',
-                    color: proj.id === 'gtmer' ? 'var(--accent-cyan)' : 'var(--accent-indigo-light)'
+                    color: proj.id === 'gtmer' ? 'var(--accent-primary)' : 'var(--accent-secondary)'
                   }}>
                     {proj.badge}
                   </span>
                 </div>
 
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 700, lineHeight: 1.35, marginBottom: '10px' }}>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 700, lineHeight: 1.35, marginBottom: '10px', color: 'var(--text-main)' }}>
                   {proj.title}
                 </h3>
 
@@ -109,7 +109,7 @@ export const ProjectsSection = () => {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '24px' }}>
                   {proj.highlights.slice(0, 2).map((h, i) => (
                     <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', fontSize: '0.84rem', color: '#cbd5e1' }}>
-                      <CheckCircle2 size={14} style={{ color: 'var(--accent-emerald)', flexShrink: 0, marginTop: '3px' }} />
+                      <CheckCircle2 size={14} style={{ color: 'var(--accent-success)', flexShrink: 0, marginTop: '3px' }} />
                       <span>{h}</span>
                     </div>
                   ))}
@@ -123,13 +123,13 @@ export const ProjectsSection = () => {
                     <span
                       key={i}
                       style={{
-                        background: 'rgba(255, 255, 255, 0.03)',
-                        border: '1px solid var(--border-subtle)',
-                        padding: '2px 8px',
+                        background: 'var(--bg-inset)',
+                        border: '1px solid var(--border-color)',
+                        padding: '3px 8px',
                         borderRadius: 'var(--radius-xs)',
                         fontSize: '0.74rem',
                         fontFamily: 'var(--font-mono)',
-                        color: 'var(--text-muted)'
+                        color: 'var(--text-secondary)'
                       }}
                     >
                       {tag}
@@ -143,12 +143,12 @@ export const ProjectsSection = () => {
                   alignItems: 'center',
                   justifyContent: 'space-between',
                   paddingTop: '16px',
-                  borderTop: '1px solid var(--border-subtle)'
+                  borderTop: '1px solid var(--border-color)'
                 }}>
                   <div style={{ display: 'flex', gap: '16px' }}>
                     {proj.stats.slice(0, 2).map((st, i) => (
                       <div key={i}>
-                        <div style={{ fontWeight: 800, fontSize: '0.95rem', color: '#ffffff', fontFamily: 'var(--font-mono)' }}>{st.value}</div>
+                        <div style={{ fontWeight: 800, fontSize: '0.95rem', color: 'var(--text-main)', fontFamily: 'var(--font-mono)' }}>{st.value}</div>
                         <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>{st.label}</div>
                       </div>
                     ))}
@@ -158,8 +158,8 @@ export const ProjectsSection = () => {
                     onClick={() => setActiveModal(proj)}
                     style={{
                       background: 'transparent',
-                      border: '1px solid var(--border-subtle)',
-                      color: '#ffffff',
+                      border: '1px solid var(--border-color)',
+                      color: 'var(--accent-primary)',
                       padding: '6px 12px',
                       borderRadius: 'var(--radius-xs)',
                       fontSize: '0.8rem',
@@ -180,37 +180,37 @@ export const ProjectsSection = () => {
           ))}
         </div>
 
-        {/* Deep Dive Architecture Modal */}
+        {/* Modal */}
         {activeModal && (
           <div style={{
             position: 'fixed',
             inset: 0,
             zIndex: 200,
-            background: 'rgba(0, 0, 0, 0.85)',
+            background: 'rgba(7, 11, 20, 0.88)',
             backdropFilter: 'blur(16px)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             padding: '24px'
           }}>
-            <div className="enterprise-card" style={{
+            <div className="custom-card" style={{
               maxWidth: '680px',
               width: '100%',
               maxHeight: '85vh',
               overflowY: 'auto',
               padding: '36px',
-              border: '1px solid var(--border-highlight)'
+              border: '1px solid var(--accent-glow)'
             }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
-                <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--accent-indigo-light)' }}>
+                <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--accent-primary)' }}>
                   ARCHITECTURE // {activeModal.number}
                 </span>
                 <button
                   onClick={() => setActiveModal(null)}
                   style={{
-                    background: 'rgba(255,255,255,0.06)',
-                    border: 'none',
-                    color: '#ffffff',
+                    background: 'var(--bg-inset)',
+                    border: '1px solid var(--border-color)',
+                    color: 'var(--text-main)',
                     padding: '4px 10px',
                     borderRadius: 'var(--radius-xs)',
                     cursor: 'pointer'
@@ -220,7 +220,7 @@ export const ProjectsSection = () => {
                 </button>
               </div>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '16px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '16px', color: 'var(--text-main)' }}>
                 {activeModal.title}
               </h2>
 
@@ -228,19 +228,19 @@ export const ProjectsSection = () => {
                 {activeModal.description}
               </p>
 
-              <h4 style={{ color: '#ffffff', fontSize: '0.88rem', textTransform: 'uppercase', letterSpacing: '1px', fontFamily: 'var(--font-mono)', marginBottom: '12px' }}>
+              <h4 style={{ color: 'var(--accent-primary)', fontSize: '0.88rem', textTransform: 'uppercase', letterSpacing: '1px', fontFamily: 'var(--font-mono)', marginBottom: '12px' }}>
                 Engineering Highlights
               </h4>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '24px' }}>
                 {activeModal.highlights.map((h, i) => (
                   <div key={i} style={{ display: 'flex', gap: '8px', alignItems: 'flex-start', fontSize: '0.88rem', color: '#cbd5e1' }}>
-                    <CheckCircle2 size={15} style={{ color: 'var(--accent-emerald)', flexShrink: 0, marginTop: '2px' }} />
+                    <CheckCircle2 size={15} style={{ color: 'var(--accent-success)', flexShrink: 0, marginTop: '2px' }} />
                     <span>{h}</span>
                   </div>
                 ))}
               </div>
 
-              <h4 style={{ color: '#ffffff', fontSize: '0.88rem', textTransform: 'uppercase', letterSpacing: '1px', fontFamily: 'var(--font-mono)', marginBottom: '12px' }}>
+              <h4 style={{ color: 'var(--accent-primary)', fontSize: '0.88rem', textTransform: 'uppercase', letterSpacing: '1px', fontFamily: 'var(--font-mono)', marginBottom: '12px' }}>
                 Complete Stack
               </h4>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
@@ -248,13 +248,13 @@ export const ProjectsSection = () => {
                   <span
                     key={i}
                     style={{
-                      background: 'rgba(255, 255, 255, 0.05)',
-                      border: '1px solid var(--border-subtle)',
+                      background: 'var(--bg-inset)',
+                      border: '1px solid var(--border-color)',
                       padding: '4px 10px',
                       borderRadius: 'var(--radius-xs)',
                       fontSize: '0.78rem',
                       fontFamily: 'var(--font-mono)',
-                      color: '#ffffff'
+                      color: 'var(--text-main)'
                     }}
                   >
                     {t}

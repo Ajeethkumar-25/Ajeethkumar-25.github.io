@@ -1,135 +1,118 @@
 import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Sparkles } from 'lucide-react';
 import { personalInfo } from '../../data/portfolioData';
+import { Terminal } from '../common/Terminal';
 
 export const HeroSection = () => {
   return (
-    <section id="hero" style={{ paddingTop: '140px', paddingBottom: '90px', position: 'relative' }}>
+    <section id="hero" style={{ paddingTop: '130px', paddingBottom: '80px', position: 'relative' }}>
       <div className="container">
-        {/* Status Pill */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '28px' }}>
-          <div className="status-pill-emerald">
-            <span className="status-dot-emerald" />
-            <span>OPEN TO SENIOR AI LEADERSHIP</span>
-          </div>
-          <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
-            [ Chennai, India • Global Remote ]
-          </span>
-        </div>
-
-        {/* Hero Title Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '1.2fr 0.8fr',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
           gap: '48px',
           alignItems: 'center'
         }}>
+          {/* Left Column: Portrait & Introduction */}
           <div>
-            <h1 className="section-title gradient-heading" style={{ fontSize: 'clamp(2.5rem, 5.5vw, 4.2rem)' }}>
-              Architecting autonomous multi-agent systems & cognitive AI.
-            </h1>
+            <div className="aurora-gradient-badge" style={{ marginBottom: '24px' }}>
+              <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--aurora-emerald)', boxShadow: '0 0 8px var(--aurora-emerald)' }} />
+              <span>Available for Senior AI Engineer Roles</span>
+            </div>
 
-            <p style={{
-              color: 'var(--text-secondary)',
-              fontSize: '1.15rem',
-              lineHeight: '1.7',
-              maxWidth: '650px',
-              margin: '24px 0 36px 0'
-            }}>
-              Senior AI Engineer with <strong>5+ years of software engineering expertise</strong>. Lead architect of <strong>GTMer</strong> (enterprise AI SDR SaaS with 31+ modules), creator of <strong>Carry Agent</strong> (dual KG + RAG cognitive engine), and author of self-healing AST code test automation frameworks.
+            <div style={{ display: 'flex', alignItems: 'center', gap: '24px', margin: '16px 0 28px 0' }}>
+              <div style={{
+                position: 'relative',
+                width: '110px',
+                height: '110px',
+                flexShrink: 0
+              }}>
+                <img
+                  src="./profile.jpg"
+                  alt={personalInfo.name}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    borderRadius: '50%',
+                    objectFit: 'cover',
+                    border: '2px solid var(--aurora-cyan)',
+                    boxShadow: '0 0 30px rgba(34, 211, 238, 0.4)'
+                  }}
+                  onError={(e) => {
+                    e.target.src = "https://raw.githubusercontent.com/Ajeethkumar-25/Ajeethkumar-25/main/profile.jpg";
+                  }}
+                />
+                <div style={{
+                  position: 'absolute',
+                  bottom: '0px',
+                  right: '0px',
+                  background: 'linear-gradient(135deg, var(--aurora-cyan), var(--aurora-indigo))',
+                  color: '#ffffff',
+                  borderRadius: '50%',
+                  padding: '5px',
+                  boxShadow: '0 0 10px rgba(0,0,0,0.5)'
+                }}>
+                  <Sparkles size={13} />
+                </div>
+              </div>
+
+              <div>
+                <h1 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 800, lineHeight: 1.15 }}>
+                  <span className="aurora-gradient-text">{personalInfo.name}</span>
+                </h1>
+                <p style={{ color: 'var(--aurora-cyan)', fontWeight: 600, fontSize: '1.02rem', marginTop: '6px' }}>
+                  {personalInfo.role}
+                </p>
+                <p style={{ color: 'var(--aurora-text-subtle)', fontSize: '0.85rem' }}>
+                  📍 {personalInfo.location}
+                </p>
+              </div>
+            </div>
+
+            <p style={{ color: 'var(--aurora-text-muted)', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '32px' }}>
+              Specializing in <strong>Autonomous Multi-Agent Swarms</strong>, <strong>Dual-Memory (Knowledge Graph + Vector RAG) Cognitive Agents</strong>, and <strong>Enterprise Multi-Tenant AI SaaS Platforms</strong> with self-healing code automation.
             </p>
 
             {/* CTAs */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginBottom: '48px' }}>
-              <a href="#projects" className="btn-electric btn-cyan">
-                <span>Inspect System Architectures</span>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', marginBottom: '40px' }}>
+              <a href="#projects" className="aurora-btn aurora-btn-primary">
+                <span>Explore Featured Systems</span>
                 <ArrowUpRight size={16} />
               </a>
-              <a href="#contact" className="btn-electric btn-outline-navy">
-                <span>Connect with Me</span>
+              <a href="#contact" className="aurora-btn aurora-btn-secondary">
+                <span>Direct Collaboration</span>
               </a>
             </div>
 
-            {/* Metric Strips */}
+            {/* Metric Counters */}
             <div style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: '24px',
-              paddingTop: '32px',
-              borderTop: '1px solid var(--border-color)'
+              gap: '16px',
+              paddingTop: '24px',
+              borderTop: '1px solid var(--aurora-border)'
             }}>
               <div>
-                <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--text-main)', fontFamily: 'var(--font-mono)' }}>5+</div>
-                <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginTop: '2px' }}>Years Engineering</div>
+                <div style={{ fontSize: '1.8rem', fontWeight: 800, color: 'var(--aurora-cyan)', fontFamily: 'var(--font-mono)' }}>{personalInfo.experienceYears}</div>
+                <div style={{ fontSize: '0.8rem', color: 'var(--aurora-text-subtle)' }}>Years Experience</div>
               </div>
               <div>
-                <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--accent-primary)', fontFamily: 'var(--font-mono)' }}>31+</div>
-                <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginTop: '2px' }}>SaaS Modules (GTMer)</div>
+                <div style={{ fontSize: '1.8rem', fontWeight: 800, color: 'var(--aurora-indigo)', fontFamily: 'var(--font-mono)' }}>31+</div>
+                <div style={{ fontSize: '0.8rem', color: 'var(--aurora-text-subtle)' }}>SaaS Modules</div>
               </div>
               <div>
-                <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--accent-success)', fontFamily: 'var(--font-mono)' }}>94%</div>
-                <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginTop: '2px' }}>Extraction Accuracy</div>
+                <div style={{ fontSize: '1.8rem', fontWeight: 800, color: 'var(--aurora-emerald)', fontFamily: 'var(--font-mono)' }}>{personalInfo.accuracyMetric}</div>
+                <div style={{ fontSize: '0.8rem', color: 'var(--aurora-text-subtle)' }}>Extraction Accuracy</div>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Identity Card */}
-          <div className="custom-card" style={{ padding: '36px', position: 'relative' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '24px' }}>
-              <img
-                src="./profile.jpg"
-                alt={personalInfo.name}
-                style={{
-                  width: '84px',
-                  height: '84px',
-                  borderRadius: 'var(--radius-sm)',
-                  objectFit: 'cover',
-                  border: '1px solid var(--accent-primary)'
-                }}
-                onError={(e) => {
-                  e.target.src = "https://raw.githubusercontent.com/Ajeethkumar-25/Ajeethkumar-25/main/profile.jpg";
-                }}
-              />
-              <div>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-main)' }}>
-                  {personalInfo.name}
-                </h3>
-                <p style={{ fontSize: '0.88rem', color: 'var(--accent-primary)', fontWeight: 500 }}>
-                  {personalInfo.role}
-                </p>
-                <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', marginTop: '2px' }}>
-                  MCA (AI & ML) • Chandigarh Univ
-                </p>
-              </div>
-            </div>
-
-            <div style={{
-              background: 'var(--bg-inset)',
-              borderRadius: 'var(--radius-xs)',
-              padding: '16px',
-              border: '1px solid var(--border-color)',
-              fontFamily: 'var(--font-mono)',
-              fontSize: '0.8rem',
-              color: 'var(--text-secondary)',
-              lineHeight: '1.6'
-            }}>
-              <div style={{ color: 'var(--accent-primary)', marginBottom: '6px' }}>// Core Specializations</div>
-              <div>• Autonomous Agent Swarms (LangGraph)</div>
-              <div>• Dual KG + Vector RAG (Neo4j, Chroma)</div>
-              <div>• Self-Healing AST Engines (Tree-Sitter)</div>
-              <div>• Async Enterprise SaaS (FastAPI, Kafka)</div>
-            </div>
+          {/* Right Column: Live Interactive Agent Session Terminal */}
+          <div>
+            <Terminal />
           </div>
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 900px) {
-          #hero .container > div {
-            grid-template-columns: 1fr !important;
-          }
-        }
-      `}</style>
     </section>
   );
 };

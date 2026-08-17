@@ -2,14 +2,14 @@ export const personalInfo = {
   name: "Ajeethkumar Muruganandham",
   shortName: "Ajeethkumar M.",
   role: "Senior AI Engineer",
-  tagline: "Autonomous Multi-Agent Architect & Cognitive Systems Engineer",
+  tagline: "Autonomous Multi-Agent Systems & Cognitive AI Engineer",
   location: "Chennai, India",
   email: "ajkmr2525@gmail.com",
   github: "https://github.com/Ajeethkumar-25",
   linkedin: "https://linkedin.com/in/ajeethkumar-muruganandham",
   experienceYears: "5+",
   accuracyMetric: "94%",
-  education: "Master of Computer Applications (AI & ML) — Chandigarh University",
+  education: "Master of Computer Applications (MCA in AI & ML) — Chandigarh University",
   bachelors: "Bachelor of Science in Computer Technology — Bharathiar University",
   philosophy: "Reason ➔ Plan ➔ Act ➔ Self-Correct ➔ Scale"
 };
@@ -160,7 +160,7 @@ export const experienceData = [
     period: "May 2024 – Present",
     current: true,
     highlights: [
-      "Architected and deployed GTMer — enterprise-grade multi-tenant AI SDR platform with LangGraph + AWS Bedrock orchestration.",
+      "Developed and deployed GTMer — enterprise-grade multi-tenant AI SDR platform with LangGraph + AWS Bedrock orchestration.",
       "Engineered intelligent document processing pipelines achieving 94% extraction accuracy across invoices & contracts.",
       "Implemented production-ready RAG pipelines with vector search (ChromaDB, FAISS, Pinecone), reducing latency by 60%.",
       "Designed scalable multi-tenant architecture supporting organization data isolation, user permissions, and AI quota metering on AWS."
@@ -184,7 +184,7 @@ export const experienceData = [
       "Designed and implemented REST APIs, SQL queries, and backend services using Python and PostgreSQL.",
       "Converted complex business requirements into scalable technical solution blueprints, speeding delivery by 25%."
     ],
-    tech: ["Python", "PostgreSQL", "REST APIs", "SQL", "Solution Architecture", "Docker"],
+    tech: ["Python", "PostgreSQL", "REST APIs", "SQL", "Solution Engineering", "Docker"],
     metrics: [
       { label: "Enterprise Projects", value: "10+" },
       { label: "Delivery Acceleration", value: "25%" }

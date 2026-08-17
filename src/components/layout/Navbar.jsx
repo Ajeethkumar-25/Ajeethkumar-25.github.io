@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Github, Linkedin, Sparkles } from 'lucide-react';
+import { Menu, X, Github, Linkedin } from 'lucide-react';
 import { personalInfo } from '../../data/portfolioData';
 
 export const Navbar = ({ activeSection, setActiveSection }) => {
@@ -7,9 +7,9 @@ export const Navbar = ({ activeSection, setActiveSection }) => {
 
   const navItems = [
     { id: 'hero', label: 'Overview' },
-    { id: 'projects', label: 'Architectures' },
+    { id: 'projects', label: 'Systems & Projects' },
     { id: 'experience', label: 'Experience' },
-    { id: 'skills', label: 'Arsenal' },
+    { id: 'skills', label: 'Technical Arsenal' },
     { id: 'contact', label: 'Contact' }
   ];
 
@@ -27,14 +27,14 @@ export const Navbar = ({ activeSection, setActiveSection }) => {
       left: 0,
       right: 0,
       zIndex: 100,
-      background: 'rgba(3, 7, 18, 0.8)',
+      background: 'rgba(3, 7, 18, 0.85)',
       backdropFilter: 'blur(24px)',
       WebkitBackdropFilter: 'blur(24px)',
       borderBottom: '1px solid var(--aurora-border)',
       padding: '16px 0'
     }}>
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        {/* Aurora Brand Logo */}
+        {/* Brand Logo */}
         <a
           href="#hero"
           onClick={(e) => { e.preventDefault(); handleNav('hero'); }}
@@ -43,27 +43,23 @@ export const Navbar = ({ activeSection, setActiveSection }) => {
             fontFamily: 'var(--font-mono)',
             fontSize: '1.05rem',
             fontWeight: 800,
-            color: '#ffffff',
+            color: 'var(--color-text-normal)',
             letterSpacing: '1px',
             display: 'flex',
             alignItems: 'center',
             gap: '8px'
           }}
         >
-          <span style={{
-            background: 'linear-gradient(135deg, var(--aurora-cyan), var(--aurora-indigo))',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent'
-          }}>
+          <span style={{ color: 'var(--color-ai-engineer)' }}>
             // AJEETHKUMAR
           </span>
           <span style={{
             fontSize: '0.68rem',
             padding: '2px 6px',
             borderRadius: '4px',
-            background: 'rgba(56, 189, 248, 0.12)',
-            color: 'var(--aurora-cyan)',
-            border: '1px solid rgba(56, 189, 248, 0.25)'
+            background: 'rgba(0, 217, 255, 0.12)',
+            color: 'var(--color-ai-engineer)',
+            border: '1px solid rgba(0, 217, 255, 0.25)'
           }}>AI</span>
         </a>
 
@@ -76,7 +72,7 @@ export const Navbar = ({ activeSection, setActiveSection }) => {
               style={{
                 background: 'transparent',
                 border: 'none',
-                color: activeSection === item.id ? 'var(--aurora-cyan)' : 'var(--aurora-text-muted)',
+                color: activeSection === item.id ? 'var(--color-ai-engineer)' : 'var(--color-text-sec)',
                 fontSize: '0.88rem',
                 fontWeight: activeSection === item.id ? 700 : 500,
                 cursor: 'pointer',
@@ -93,7 +89,7 @@ export const Navbar = ({ activeSection, setActiveSection }) => {
                   transform: 'translateX(-50%)',
                   width: '16px',
                   height: '2px',
-                  background: 'var(--aurora-cyan)',
+                  background: 'var(--color-ai-engineer)',
                   borderRadius: '2px'
                 }} />
               )}
@@ -107,7 +103,7 @@ export const Navbar = ({ activeSection, setActiveSection }) => {
             href={personalInfo.github}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: 'var(--aurora-text-muted)', transition: 'all 0.2s ease' }}
+            style={{ color: 'var(--color-text-sec)', transition: 'all 0.2s ease' }}
             aria-label="GitHub Profile"
           >
             <Github size={18} />
@@ -116,7 +112,7 @@ export const Navbar = ({ activeSection, setActiveSection }) => {
             href={personalInfo.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: 'var(--aurora-text-muted)', transition: 'all 0.2s ease' }}
+            style={{ color: 'var(--color-text-sec)', transition: 'all 0.2s ease' }}
             aria-label="LinkedIn Profile"
           >
             <Linkedin size={18} />

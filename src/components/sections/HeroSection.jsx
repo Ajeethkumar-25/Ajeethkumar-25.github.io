@@ -35,8 +35,8 @@ export const HeroSection = () => {
                     height: '100%',
                     borderRadius: '50%',
                     objectFit: 'cover',
-                    border: '2px solid var(--aurora-cyan)',
-                    boxShadow: '0 0 30px rgba(34, 211, 238, 0.4)'
+                    border: '2px solid var(--color-ai-engineer)',
+                    boxShadow: '0 0 30px rgba(0, 217, 255, 0.45)'
                   }}
                   onError={(e) => {
                     e.target.src = "https://raw.githubusercontent.com/Ajeethkumar-25/Ajeethkumar-25/main/profile.jpg";
@@ -46,8 +46,8 @@ export const HeroSection = () => {
                   position: 'absolute',
                   bottom: '0px',
                   right: '0px',
-                  background: 'linear-gradient(135deg, var(--aurora-cyan), var(--aurora-indigo))',
-                  color: '#ffffff',
+                  background: 'var(--color-button)',
+                  color: '#030712',
                   borderRadius: '50%',
                   padding: '5px',
                   boxShadow: '0 0 10px rgba(0,0,0,0.5)'
@@ -57,20 +57,20 @@ export const HeroSection = () => {
               </div>
 
               <div>
-                <h1 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 800, lineHeight: 1.15 }}>
+                <h1 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 800, lineHeight: 1.15, color: 'var(--color-text-normal)' }}>
                   <span className="aurora-gradient-text">{personalInfo.name}</span>
                 </h1>
-                <p style={{ color: 'var(--aurora-cyan)', fontWeight: 600, fontSize: '1.02rem', marginTop: '6px' }}>
+                <p style={{ color: 'var(--color-ai-engineer)', fontWeight: 700, fontSize: '1.05rem', marginTop: '6px', letterSpacing: '0.5px' }}>
                   {personalInfo.role}
                 </p>
-                <p style={{ color: 'var(--aurora-text-subtle)', fontSize: '0.85rem' }}>
+                <p style={{ color: 'var(--color-text-sec)', fontSize: '0.85rem' }}>
                   📍 {personalInfo.location}
                 </p>
               </div>
             </div>
 
-            <p style={{ color: 'var(--aurora-text-muted)', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '32px' }}>
-              Specializing in <strong>Autonomous Multi-Agent Swarms</strong>, <strong>Dual-Memory (Knowledge Graph + Vector RAG) Cognitive Agents</strong>, and <strong>Enterprise Multi-Tenant AI SaaS Platforms</strong> with self-healing code automation.
+            <p style={{ color: 'var(--color-text-sec)', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '32px' }}>
+              Specializing in <strong style={{ color: 'var(--color-text-normal)' }}>Autonomous Multi-Agent Swarms</strong>, <strong style={{ color: 'var(--color-text-normal)' }}>Dual-Memory (Knowledge Graph + Vector RAG) Cognitive Agents</strong>, and <strong style={{ color: 'var(--color-text-normal)' }}>Enterprise Multi-Tenant AI SaaS Platforms</strong> with self-healing code automation.
             </p>
 
             {/* CTAs */}
@@ -93,16 +93,16 @@ export const HeroSection = () => {
               borderTop: '1px solid var(--aurora-border)'
             }}>
               <div>
-                <div style={{ fontSize: '1.8rem', fontWeight: 800, color: 'var(--aurora-cyan)', fontFamily: 'var(--font-mono)' }}>{personalInfo.experienceYears}</div>
-                <div style={{ fontSize: '0.8rem', color: 'var(--aurora-text-subtle)' }}>Years Experience</div>
+                <div style={{ fontSize: '1.8rem', fontWeight: 800, color: 'var(--color-ai-engineer)', fontFamily: 'var(--font-mono)' }}>{personalInfo.experienceYears}</div>
+                <div style={{ fontSize: '0.8rem', color: 'var(--color-text-sec)' }}>Years Experience</div>
               </div>
               <div>
-                <div style={{ fontSize: '1.8rem', fontWeight: 800, color: 'var(--aurora-indigo)', fontFamily: 'var(--font-mono)' }}>31+</div>
-                <div style={{ fontSize: '0.8rem', color: 'var(--aurora-text-subtle)' }}>SaaS Modules</div>
+                <div style={{ fontSize: '1.8rem', fontWeight: 800, color: '#818cf8', fontFamily: 'var(--font-mono)' }}>31+</div>
+                <div style={{ fontSize: '0.8rem', color: 'var(--color-text-sec)' }}>SaaS Modules</div>
               </div>
               <div>
                 <div style={{ fontSize: '1.8rem', fontWeight: 800, color: 'var(--aurora-emerald)', fontFamily: 'var(--font-mono)' }}>{personalInfo.accuracyMetric}</div>
-                <div style={{ fontSize: '0.8rem', color: 'var(--aurora-text-subtle)' }}>Extraction Accuracy</div>
+                <div style={{ fontSize: '0.8rem', color: 'var(--color-text-sec)' }}>Extraction Accuracy</div>
               </div>
             </div>
           </div>

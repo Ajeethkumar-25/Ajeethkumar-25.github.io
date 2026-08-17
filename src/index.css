@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Exact Custom Palette */
+  /* Aurora Ultra-Premium Theme Variables */
   --bg-main: #070B14;           /* Deep Navy */
   --bg-secondary: #0D1424;      /* Dark Blue */
   --bg-card: #111B2E;           /* Navy Slate */
-  --bg-card-hover: #16243d;     /* Elevated Navy */
-  --bg-inset: #090f1d;          /* Deepest Inset */
+  --bg-card-hover: #17243d;     /* Elevated Navy */
+  --bg-glass: rgba(17, 27, 46, 0.75);
+  --bg-inset: #090F1D;
 
   --accent-primary: #22D3EE;     /* Electric Cyan */
   --accent-secondary: #8B5CF6;   /* AI Violet */
@@ -15,24 +16,25 @@
 
   --text-main: #F8FAFC;          /* Almost White */
   --text-secondary: #94A3B8;     /* Slate */
-  --text-muted: #64748B;         /* Muted Slate */
+  --text-muted: #64748B;
 
-  --border-color: #1E293B;       /* Blue Slate */
-  --border-hover: #334155;       /* Lighter Slate */
-  --border-accent: rgba(34, 211, 238, 0.4);
+  --border-color: #1E293B;
+  --border-highlight: rgba(255, 255, 255, 0.12);
+  --border-accent: rgba(34, 211, 238, 0.35);
 
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  --radius-xs: 6px;
-  --radius-sm: 10px;
+  --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-pill: 9999px;
 
-  --shadow-card: 0 4px 24px -2px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 35px -8px rgba(34, 211, 238, 0.25);
-  --shadow-violet-glow: 0 0 35px -8px rgba(139, 92, 246, 0.25);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 12px 32px -4px rgba(0, 0, 0, 0.6);
+  --shadow-cyan: 0 0 35px -5px rgba(34, 211, 238, 0.25);
+  --shadow-violet: 0 0 35px -5px rgba(139, 92, 246, 0.25);
+
   --transition-fast: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -58,18 +60,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Engineering Mesh Overlay */
-.bg-mesh-overlay {
+/* Background Atmosphere */
+.aurora-bg-mesh {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
   background-image: 
-    radial-gradient(ellipse at 20% 10%, rgba(139, 92, 246, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 80%, rgba(34, 211, 238, 0.08) 0%, transparent 50%),
-    linear-gradient(to right, rgba(30, 41, 59, 0.4) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(30, 41, 59, 0.4) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 56px 56px, 56px 56px;
+    radial-gradient(ellipse at 15% 15%, rgba(139, 92, 246, 0.14) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 25%, rgba(34, 211, 238, 0.12) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 85%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+    linear-gradient(to right, rgba(30, 41, 59, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 41, 59, 0.35) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 56px 56px, 56px 56px;
 }
 
 .container {
@@ -81,24 +84,26 @@ body {
   z-index: 1;
 }
 
-/* Card Design Tokens */
-.custom-card {
+/* Aurora Card Container */
+.aurora-card {
   background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-sm);
   transition: var(--transition-smooth);
 }
 
-.custom-card:hover {
+.aurora-card:hover {
   border-color: var(--accent-glow);
-  box-shadow: var(--shadow-card), var(--shadow-glow);
+  box-shadow: var(--shadow-md), var(--shadow-cyan);
   transform: translateY(-2px);
 }
 
-/* Headings and Typography */
+/* Typography Utilities */
 .gradient-heading {
-  background: linear-gradient(135deg, #F8FAFC 0%, #cbd5e1 50%, var(--accent-primary) 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 50%, var(--accent-primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -135,14 +140,14 @@ body {
   max-width: 620px;
 }
 
-/* Buttons */
-.btn-electric {
+/* Aurora Buttons */
+.btn-aurora {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 11px 22px;
-  border-radius: var(--radius-xs);
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
   font-weight: 600;
   font-size: 0.9rem;
   cursor: pointer;
@@ -152,31 +157,31 @@ body {
   font-family: var(--font-sans);
 }
 
-.btn-cyan {
+.btn-aurora-cyan {
   background: var(--accent-primary);
   color: #070B14;
-  box-shadow: 0 4px 20px rgba(34, 211, 238, 0.3);
+  box-shadow: 0 4px 20px rgba(34, 211, 238, 0.35);
 }
 
-.btn-cyan:hover {
+.btn-aurora-cyan:hover {
   background: var(--accent-glow);
-  box-shadow: 0 6px 25px rgba(34, 211, 238, 0.5);
+  box-shadow: 0 6px 25px rgba(34, 211, 238, 0.55);
   transform: translateY(-1px);
 }
 
-.btn-outline-navy {
+.btn-aurora-ghost {
   background: rgba(13, 20, 36, 0.8);
   color: var(--text-main);
   border-color: var(--border-color);
 }
 
-.btn-outline-navy:hover {
+.btn-aurora-ghost:hover {
   background: var(--bg-card);
   border-color: var(--accent-primary);
   color: var(--accent-primary);
 }
 
-/* Status Indicator */
+/* Status Pill */
 .status-pill-emerald {
   display: inline-flex;
   align-items: center;

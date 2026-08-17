@@ -1,42 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Aurora Ultra-Premium Theme Variables */
-  --bg-main: #070B14;           /* Deep Navy */
-  --bg-secondary: #0D1424;      /* Dark Blue */
-  --bg-card: #111B2E;           /* Navy Slate */
-  --bg-card-hover: #17243d;     /* Elevated Navy */
-  --bg-glass: rgba(17, 27, 46, 0.75);
-  --bg-inset: #090F1D;
+  /* Aurora Design System 2.0 */
+  --aurora-bg: #030712;
+  --aurora-surface: rgba(15, 23, 42, 0.65);
+  --aurora-surface-hover: rgba(30, 41, 59, 0.85);
+  --aurora-surface-active: #1e293b;
+  --aurora-inset: #020617;
+  
+  --aurora-primary: #38bdf8;
+  --aurora-cyan: #22d3ee;
+  --aurora-indigo: #6366f1;
+  --aurora-violet: #a855f7;
+  --aurora-emerald: #10b981;
 
-  --accent-primary: #22D3EE;     /* Electric Cyan */
-  --accent-secondary: #8B5CF6;   /* AI Violet */
-  --accent-glow: #38BDF8;        /* Bright Blue */
-  --accent-success: #34D399;     /* Emerald */
+  --aurora-text: #f8fafc;
+  --aurora-text-muted: #94a3b8;
+  --aurora-text-subtle: #64748b;
 
-  --text-main: #F8FAFC;          /* Almost White */
-  --text-secondary: #94A3B8;     /* Slate */
-  --text-muted: #64748B;
+  --aurora-border: rgba(255, 255, 255, 0.08);
+  --aurora-border-hover: rgba(56, 189, 248, 0.4);
+  --aurora-border-active: rgba(99, 102, 241, 0.5);
 
-  --border-color: #1E293B;
-  --border-highlight: rgba(255, 255, 255, 0.12);
-  --border-accent: rgba(34, 211, 238, 0.35);
-
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
-  --radius-pill: 9999px;
+  --radius-full: 9999px;
 
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 12px 32px -4px rgba(0, 0, 0, 0.6);
-  --shadow-cyan: 0 0 35px -5px rgba(34, 211, 238, 0.25);
-  --shadow-violet: 0 0 35px -5px rgba(139, 92, 246, 0.25);
-
-  --transition-fast: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-glow: 0 0 50px -10px rgba(56, 189, 248, 0.25);
+  --shadow-violet-glow: 0 0 50px -10px rgba(168, 85, 247, 0.25);
 }
 
 *, *::before, *::after {
@@ -51,8 +46,8 @@ html {
 }
 
 body {
-  background-color: var(--bg-main);
-  color: var(--text-main);
+  background-color: var(--aurora-bg);
+  color: var(--aurora-text);
   font-family: var(--font-sans);
   line-height: 1.6;
   overflow-x: hidden;
@@ -60,19 +55,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Background Atmosphere */
-.aurora-bg-mesh {
+/* Ambient Aurora Gradient Orbs */
+.aurora-ambient-glow {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
   background-image: 
-    radial-gradient(ellipse at 15% 15%, rgba(139, 92, 246, 0.14) 0%, transparent 45%),
-    radial-gradient(ellipse at 85% 25%, rgba(34, 211, 238, 0.12) 0%, transparent 45%),
-    radial-gradient(ellipse at 50% 85%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
-    linear-gradient(to right, rgba(30, 41, 59, 0.35) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(30, 41, 59, 0.35) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 100% 100%, 56px 56px, 56px 56px;
+    radial-gradient(ellipse 60% 40% at 20% 15%, rgba(99, 102, 241, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 85% 25%, rgba(34, 211, 238, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 60% at 50% 80%, rgba(168, 85, 247, 0.12) 0%, transparent 65%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
 }
 
 .container {
@@ -84,64 +79,48 @@ body {
   z-index: 1;
 }
 
-/* Aurora Card Container */
-.aurora-card {
-  background: var(--bg-card);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--border-color);
+/* Aurora Glass Card */
+.aurora-glass-card {
+  background: var(--aurora-surface);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--aurora-border);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition-smooth);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.aurora-card:hover {
-  border-color: var(--accent-glow);
-  box-shadow: var(--shadow-md), var(--shadow-cyan);
+.aurora-glass-card:hover {
+  border-color: var(--aurora-border-hover);
+  box-shadow: var(--shadow-glow), 0 20px 40px -15px rgba(0, 0, 0, 0.7);
   transform: translateY(-2px);
 }
 
-/* Typography Utilities */
-.gradient-heading {
-  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 50%, var(--accent-primary) 100%);
+/* Aurora Gradient Typography */
+.aurora-gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 45%, var(--aurora-primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.pill-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.aurora-gradient-badge {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(34, 211, 238, 0.15) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: var(--aurora-cyan);
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: var(--accent-primary);
-  background: rgba(34, 211, 238, 0.08);
   padding: 6px 14px;
-  border-radius: var(--radius-pill);
-  border: 1px solid rgba(34, 211, 238, 0.25);
-  margin-bottom: 16px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.section-title {
-  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
-  margin-bottom: 16px;
-}
-
-.section-subtitle {
-  color: var(--text-secondary);
-  font-size: 1.05rem;
-  line-height: 1.65;
-  max-width: 620px;
-}
-
-/* Aurora Buttons */
-.btn-aurora {
+/* Aurora Button Actions */
+.aurora-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -149,57 +128,33 @@ body {
   padding: 12px 24px;
   border-radius: var(--radius-sm);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   cursor: pointer;
-  transition: var(--transition-fast);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
-  border: 1px solid transparent;
   font-family: var(--font-sans);
 }
 
-.btn-aurora-cyan {
-  background: var(--accent-primary);
-  color: #070B14;
-  box-shadow: 0 4px 20px rgba(34, 211, 238, 0.35);
+.aurora-btn-primary {
+  background: linear-gradient(135deg, var(--aurora-primary) 0%, var(--aurora-indigo) 100%);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.35);
 }
 
-.btn-aurora-cyan:hover {
-  background: var(--accent-glow);
-  box-shadow: 0 6px 25px rgba(34, 211, 238, 0.55);
-  transform: translateY(-1px);
+.aurora-btn-primary:hover {
+  box-shadow: 0 8px 30px rgba(56, 189, 248, 0.6);
+  transform: translateY(-2px);
 }
 
-.btn-aurora-ghost {
-  background: rgba(13, 20, 36, 0.8);
-  color: var(--text-main);
-  border-color: var(--border-color);
+.aurora-btn-secondary {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--aurora-text);
+  border: 1px solid var(--aurora-border);
 }
 
-.btn-aurora-ghost:hover {
-  background: var(--bg-card);
-  border-color: var(--accent-primary);
-  color: var(--accent-primary);
-}
-
-/* Status Pill */
-.status-pill-emerald {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 5px 12px;
-  border-radius: var(--radius-pill);
-  font-size: 0.76rem;
-  font-weight: 600;
-  font-family: var(--font-mono);
-  background: rgba(52, 211, 153, 0.08);
-  color: var(--accent-success);
-  border: 1px solid rgba(52, 211, 153, 0.25);
-}
-
-.status-dot-emerald {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent-success);
-  box-shadow: 0 0 8px var(--accent-success);
+.aurora-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--aurora-cyan);
+  color: var(--aurora-cyan);
 }

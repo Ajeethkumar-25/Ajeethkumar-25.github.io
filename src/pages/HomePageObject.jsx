@@ -8,10 +8,6 @@ import { SkillsSection } from '../components/sections/SkillsSection';
 import { ContactSection } from '../components/sections/ContactSection';
 import { Footer } from '../components/layout/Footer';
 
-/**
- * HomePageObject (Single Page POM Architecture)
- * Orchestrates page-level interactions, state transitions, and section components.
- */
 export const HomePageObject = () => {
   const [activeSection, setActiveSection] = useState('hero');
 
@@ -22,49 +18,35 @@ export const HomePageObject = () => {
 
   return (
     <div
-      data-testid="portfolio-single-page"
+      data-testid="aurora-portfolio-root"
       style={{
         position: 'relative',
         minHeight: '100vh',
-        backgroundColor: 'var(--bg-main)',
-        color: 'var(--text-main)'
+        backgroundColor: 'var(--aurora-bg)',
+        color: 'var(--aurora-text)'
       }}
     >
-      {/* Background Grid Layer */}
-      <div className="bg-mesh-overlay" data-testid="bg-mesh-overlay" />
+      {/* Aurora Ambient Glow Overlays */}
+      <div className="aurora-ambient-glow" data-testid="aurora-ambient-glow" />
 
-      {/* Global Navigation Object */}
+      {/* Global Navbar */}
       <Navbar
         activeSection={activeSection}
         setActiveSection={handleNavigate}
-        data-testid="page-navbar"
+        data-testid="aurora-navbar"
       />
 
-      {/* Main Single Page Sections */}
+      {/* Main Single-Page Sections */}
       <main style={{ position: 'relative', zIndex: 1 }}>
-        <section id="hero" data-testid="page-hero-section">
-          <HeroSection onExplore={() => handleNavigate('projects')} />
-        </section>
-
-        <section id="projects" data-testid="page-projects-section">
-          <ProjectsSection />
-        </section>
-
-        <section id="experience" data-testid="page-experience-section">
-          <ExperienceSection />
-        </section>
-
-        <section id="skills" data-testid="page-skills-section">
-          <SkillsSection />
-        </section>
-
-        <section id="contact" data-testid="page-contact-section">
-          <ContactSection />
-        </section>
+        <HeroSection onExplore={() => handleNavigate('projects')} />
+        <ProjectsSection />
+        <ExperienceSection />
+        <SkillsSection />
+        <ContactSection />
       </main>
 
-      {/* Global Footer Object */}
-      <Footer data-testid="page-footer" />
+      {/* Global Footer */}
+      <Footer data-testid="aurora-footer" />
     </div>
   );
 };

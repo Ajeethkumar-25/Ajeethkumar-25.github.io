@@ -18,22 +18,22 @@ export const HomePageObject = () => {
 
   return (
     <div
-      data-testid="aurora-portfolio-root"
+      data-testid="anthropic-portfolio-root"
       style={{
         position: 'relative',
         minHeight: '100vh',
-        backgroundColor: 'var(--aurora-bg)',
-        color: 'var(--aurora-text)'
+        backgroundColor: 'var(--theme-bg)',
+        color: 'var(--text-main)'
       }}
     >
-      {/* Aurora Ambient Glow Overlays */}
-      <div className="aurora-ambient-glow" data-testid="aurora-ambient-glow" />
+      {/* Warm Ambient Terminal Glow */}
+      <div className="anthropic-bg-glow" data-testid="anthropic-bg-glow" />
 
       {/* Global Navbar */}
       <Navbar
         activeSection={activeSection}
         setActiveSection={handleNavigate}
-        data-testid="aurora-navbar"
+        data-testid="anthropic-navbar"
       />
 
       {/* Main Single-Page Sections */}
@@ -46,7 +46,7 @@ export const HomePageObject = () => {
       </main>
 
       {/* Global Footer */}
-      <Footer data-testid="aurora-footer" />
+      <Footer data-testid="anthropic-footer" />
     </div>
   );
 };

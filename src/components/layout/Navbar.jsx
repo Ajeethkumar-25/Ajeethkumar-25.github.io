@@ -27,10 +27,10 @@ export const Navbar = ({ activeSection, setActiveSection }) => {
       left: 0,
       right: 0,
       zIndex: 100,
-      background: 'rgba(3, 7, 18, 0.85)',
+      background: 'rgba(12, 10, 9, 0.85)',
       backdropFilter: 'blur(24px)',
       WebkitBackdropFilter: 'blur(24px)',
-      borderBottom: '1px solid var(--aurora-border)',
+      borderBottom: '1px solid var(--border-color)',
       padding: '16px 0'
     }}>
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -43,23 +43,23 @@ export const Navbar = ({ activeSection, setActiveSection }) => {
             fontFamily: 'var(--font-mono)',
             fontSize: '1.05rem',
             fontWeight: 800,
-            color: 'var(--color-text-normal)',
+            color: 'var(--text-main)',
             letterSpacing: '1px',
             display: 'flex',
             alignItems: 'center',
             gap: '8px'
           }}
         >
-          <span style={{ color: 'var(--color-ai-engineer)' }}>
+          <span style={{ color: 'var(--accent-amber)' }}>
             // AJEETHKUMAR
           </span>
           <span style={{
             fontSize: '0.68rem',
             padding: '2px 6px',
             borderRadius: '4px',
-            background: 'rgba(0, 217, 255, 0.12)',
-            color: 'var(--color-ai-engineer)',
-            border: '1px solid rgba(0, 217, 255, 0.25)'
+            background: 'rgba(245, 158, 11, 0.12)',
+            color: 'var(--accent-gold)',
+            border: '1px solid rgba(245, 158, 11, 0.25)'
           }}>AI</span>
         </a>
 
@@ -72,7 +72,7 @@ export const Navbar = ({ activeSection, setActiveSection }) => {
               style={{
                 background: 'transparent',
                 border: 'none',
-                color: activeSection === item.id ? 'var(--color-ai-engineer)' : 'var(--color-text-sec)',
+                color: activeSection === item.id ? 'var(--accent-amber)' : 'var(--text-muted)',
                 fontSize: '0.88rem',
                 fontWeight: activeSection === item.id ? 700 : 500,
                 cursor: 'pointer',
@@ -89,7 +89,7 @@ export const Navbar = ({ activeSection, setActiveSection }) => {
                   transform: 'translateX(-50%)',
                   width: '16px',
                   height: '2px',
-                  background: 'var(--color-ai-engineer)',
+                  background: 'var(--accent-amber)',
                   borderRadius: '2px'
                 }} />
               )}
@@ -103,7 +103,7 @@ export const Navbar = ({ activeSection, setActiveSection }) => {
             href={personalInfo.github}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: 'var(--color-text-sec)', transition: 'all 0.2s ease' }}
+            style={{ color: 'var(--text-muted)', transition: 'all 0.2s ease' }}
             aria-label="GitHub Profile"
           >
             <Github size={18} />
@@ -112,14 +112,14 @@ export const Navbar = ({ activeSection, setActiveSection }) => {
             href={personalInfo.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: 'var(--color-text-sec)', transition: 'all 0.2s ease' }}
+            style={{ color: 'var(--text-muted)', transition: 'all 0.2s ease' }}
             aria-label="LinkedIn Profile"
           >
             <Linkedin size={18} />
           </a>
           <button
             onClick={() => handleNav('contact')}
-            className="aurora-btn aurora-btn-primary"
+            className="warm-btn warm-btn-primary"
             style={{ padding: '8px 18px', fontSize: '0.82rem' }}
           >
             Get in Touch
@@ -139,8 +139,8 @@ export const Navbar = ({ activeSection, setActiveSection }) => {
 
       {menuOpen && (
         <div style={{
-          background: 'var(--aurora-bg)',
-          borderBottom: '1px solid var(--aurora-border)',
+          background: 'var(--theme-bg)',
+          borderBottom: '1px solid var(--border-color)',
           padding: '24px',
           display: 'flex',
           flexDirection: 'column',
